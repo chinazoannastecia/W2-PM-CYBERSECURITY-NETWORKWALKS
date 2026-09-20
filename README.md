@@ -133,7 +133,30 @@ The Nmap half shifted from reading to probing: sweeping my own hotspot subnet `1
 
 If there's one takeaway from the week, it's that documentation matters as much as the technical work itself, a finding is only useful if it's written down clearly enough that someone else (or future me) can see what was run, what came back, and what it actually means in terms of risk. Everything here stayed within the scope I was authorized for: a domain that is public and my own local network.
 
-*
+## 8. Evidences Collected
+
+Kali Linux Terminal and Nmap screenshots captured during testing
+
+### whois networkwalks.com
+![whois](evidences/whois.png)
+
+### whatweb networkwalks.com
+![whatweb](evidences/whatweb.png)
+
+### nslookup networkwalks.com
+![nslookup](evidences/nslookup.png)
+
+### curl -I networkwalks.com
+![curl](evidences/curl.png)
+
+### wafw00f networkwalks.com
+![wafw00f](evidences/wafw00f.png)
+
+### dnsrecon -d networkwalks.com
+![dnsrecon](evidences/dnsrecon.png)
+
+### nmap -sn 192.168.43.0/24
+![nmap](evidences/nmap.png)
 
 
 
