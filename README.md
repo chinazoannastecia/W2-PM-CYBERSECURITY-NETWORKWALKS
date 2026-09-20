@@ -32,6 +32,4 @@ I executed six different Kali Linux tools on networkwalks.com — WHOIS, WhatWeb
 
 **WHOIS** was the first step because domain registration information is usually the easiest place to start. The result showed the domain is hosted with GoDaddy.com, LLC, registered on 20 November 2019 and set to expire on 20 November 2027, last updated on 11 November 2021. The record has four client-side locks (clientDeleteProhibited, clientRenewProhibited, clientTransferProhibited, clientUpdateProhibited) which means the domain is protected from unauthorized changes. The Name Servers are NS6133.HOSTGATOR.COM and NS6134.HOSTGATOR.COM.
 
-**Screenshot:**
 
-![whois](/screenshots/whois.png)
