@@ -62,7 +62,7 @@ I used curl to fetch the HTTP response and HTML source of networkwalks.com. The 
 The result shows the site uses WordPress with Yoast SEO plugin v27.9. The meta description states it specializes in Network training courses including Cisco CCNA, CCNP, Cybersecurity, Ethical Hacking, Python Programming and Linux. It also shows Open Graph tags like og:title "Networkwalks Academy" and og:type website.
 
 This helps in footprinting because it reveals the CMS, SEO plugin version and the purpose of the website.
-### 4.1.2 WhatWeb
+### WhatWeb
 
 I used WhatWeb to fingerprint the technologies used by networkwalks.com. The scan was done on both http and https.
 
@@ -74,6 +74,20 @@ The result shows:
 - Other technologies: Google Tag Manager, HTML5, Frame
 
 This information is useful for footprinting as it reveals the web server, CMS and plugins.
+### 3.2 Network Scanning with nmap
+
+The second half of the week moved from passive lookups to actively scanning a live network, in this case, my own Wi-Fi hotspot rather than an organisational LAN.
+
+I pointed Nmap at `192.168.43.0/24` and ran it with the **Ping scan** profile, which under the hood executes `nmap -sn 192.168.43.0/24`.
+
+Out of the 256 addresses in that range, two hosts answered:
+
+- `192.168.43.244` - host is up; MAC `66:0B:CB:7B:10:A8` 
+- `192.168.43.197` - host is up (my scanning device)
+
+The scan wrapped up in 12.58 seconds (256 addresses scanned, 2 hosts up). This is a host discovery scan, so no ports were probed - it only confirms which IPs are active on the hotspot, which is the first step before deeper port scanning.
+
+*
 
 
 
