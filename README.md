@@ -157,7 +157,8 @@ Kali Linux Terminal and Nmap screenshots captured during testing
 
 ### nmap -sn 192.168.43.0/24
 ![nmap](nmap.png.png)
-
+### Nmap Network Topology
+![nmap-topology](Nemap%20Network%20Topology.png)
 ## Author
 
 **Ugwuoke Annastecia** Cybersecurity Professional (Intern)
