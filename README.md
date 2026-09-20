@@ -86,6 +86,23 @@ Out of the 256 addresses in that range, two hosts answered:
 - `192.168.43.197` - host is up (my scanning device)
 
 The scan wrapped up in 12.58 seconds (256 addresses scanned, 2 hosts up). This is a host discovery scan, so no ports were probed - it only confirms which IPs are active on the hotspot, which is the first step before deeper port scanning.
+## 5. Risk Analysis / Impact
+
+Pulling together what each tool surfaced, here's how I'd rate the exposure:
+
+| # | Finding | Evidence / Observation | Risk |
+|---|---------|------------------------|------|
+| 1 | CMS and plugin version exposed | WhatWeb fingerprinted WordPress 7.1.1 and WordPress Download Manager 3.3.58 from the page's generator meta tag and asset query strings. | Low |
+| 2 | Hosting IP address exposed | Nslookup resolved `networkwalks.com` to `192.232.216.135`. | Low |
+| 3 | REST API endpoint and cookie details visible in headers | `curl -I` revealed the `/wp-json/` discovery link (with a direct page-53 reference) and a Secure/HttpOnly `__wpdm_client` session cookie. | Low |
+| 4 | WAF product identifiable | wafw00f confirmed ModSecurity (SpiderLabs) is in front of the site after 2 requests. | Low |
+| 5 | DNS/mail footprint exposed | DNSRecon pulled SOA, NS, A, MX, SPF, TXT and SRV Autodiscover records spanning six cPanel IP addresses. | Low |
+| 6 | Nameserver software version disclosed | Both authoritative servers ( `192.232.216.131` and `50.87.144.87` ) reported BIND version `9.16.23-RH`. | Medium |
+| 7 | Live hosts found on local hotspot | Nmap found 2 live hosts on `192.168.43.0/24`; `192.168.43.244` with MAC `66:0B:CB:7B:10:A8` and `192.168.43.197` (scanning device). No ports were scanned, only host discovery. | Low |
+
+**Risk level key: ● Critical ● Medium ● Low**
+
+None of the items above were exploited or confirmed as actual vulnerabilities, this was purely an information-gathering and host-discovery exercise. A version number, an open port, or a DNS record on its own doesn't prove a system is exploitable; it just narrows down where a deeper, authorised test would need to look.
 
 *
 
