@@ -133,11 +133,7 @@ The Nmap half shifted from reading to probing: sweeping my own hotspot subnet `1
 
 If there's one takeaway from the week, it's that documentation matters as much as the technical work itself, a finding is only useful if it's written down clearly enough that someone else (or future me) can see what was run, what came back, and what it actually means in terms of risk. Everything here stayed within the scope I was authorized for: a domain that is public and my own local network.
 
-## 8. Evidences Collected
-
-Kali Linux Terminal and Nmap screenshots captured during testing
-
-## 8. Evidences Collected
+## 7. Evidences Collected
 
 Kali Linux Terminal and Nmap screenshots captured during testing
 
@@ -162,7 +158,19 @@ Kali Linux Terminal and Nmap screenshots captured during testing
 ### nmap -sn 192.168.43.0/24
 ![nmap](nmap.png.png)
 
+## Author
 
+**Ugwuoke Annastecia** Cybersecurity Professional (Intern)
+
+## Project Information
+
+**Program Name:** Cybersecurity Program at Networkwalks | **Week:** 02 | **Task:** Footprinting & Network Scanning Phases
+
+**Target:** networkwalks.com (passive) and 192.168.43.0/24 (my own hotspot - active scan)
+
+**Tools Used:** whois, whatweb, nslookup, curl, wafw00f, dnsrecon, nmap
+
+**GitHub:** github.com/chinazoannastecia/W2-PM-CYBERSECURITY-NETWORKWALKS
 
 
 
