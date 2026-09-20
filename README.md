@@ -137,26 +137,30 @@ If there's one takeaway from the week, it's that documentation matters as much a
 
 Kali Linux Terminal and Nmap screenshots captured during testing
 
+## 8. Evidences Collected
+
+Kali Linux Terminal and Nmap screenshots captured during testing
+
 ### whois networkwalks.com
-![whois](evidences/whois.png)
+![whois](whois.png.png)
 
 ### whatweb networkwalks.com
-![whatweb](evidences/whatweb.png)
+![whatweb](Whatweb.png.png)
 
 ### nslookup networkwalks.com
-![nslookup](evidences/nslookup.png)
+![nslookup](nslookup.png.png)
 
 ### curl -I networkwalks.com
-![curl](evidences/curl.png)
+![curl](curl.png.png)
 
 ### wafw00f networkwalks.com
-![wafw00f](evidences/wafw00f.png)
+![wafw00f](wafw00f.png.png)
 
 ### dnsrecon -d networkwalks.com
-![dnsrecon](evidences/dnsrecon.png)
+![dnsrecon](dnsrecon.png.png)
 
 ### nmap -sn 192.168.43.0/24
-![nmap](evidences/nmap.png)
+![nmap](nmap.png.png)
 
 
 
