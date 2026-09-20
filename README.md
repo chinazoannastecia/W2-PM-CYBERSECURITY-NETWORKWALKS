@@ -163,7 +163,7 @@ Kali Linux Terminal and Nmap screenshots captured during testing
 ![nmap-topology](Nemap%20Network%20Topology.png)
 ## Author
 
-**Ugwuoke Annastecia** Cybersecurity Professional (Intern)
+**Ugwuoke, Annastecia** Cybersecurity Professional (Intern)
 
 ## Project Information
 
