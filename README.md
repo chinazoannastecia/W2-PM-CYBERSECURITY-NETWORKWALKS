@@ -17,5 +17,6 @@ FOOTPRINTING &amp; NETWORK SCANNING PHASES
 | Tools Used | whois, whatweb, nslookup, curl, wafw00f, dnsrecon, zenmap |
 | Summary | This report contains footprinting and scanning results for networkwalks.com |
 
-1. Liability Disclaimer
+1. ## **1. Liability Disclaimer**
+2. 
 Every task in this report was carried out either against networkwalks.com, for which the internship program already has documented written approval, or against a Wi-Fi network that belongs to me and that I administer myself. Nothing here is intended for anything beyond learning and personal skill-building. This document should not be used to target a system that has not been authorised for testing, that responsibility sits entirely with whoever chooses to do so, not with Networkwalks, the instructors, or me. Unauthorised access carries real legal consequences in most jurisdictions, whether or not any actual damage occurs.
