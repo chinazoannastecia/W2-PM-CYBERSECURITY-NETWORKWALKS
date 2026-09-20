@@ -62,6 +62,19 @@ I used curl to fetch the HTTP response and HTML source of networkwalks.com. The 
 The result shows the site uses WordPress with Yoast SEO plugin v27.9. The meta description states it specializes in Network training courses including Cisco CCNA, CCNP, Cybersecurity, Ethical Hacking, Python Programming and Linux. It also shows Open Graph tags like og:title "Networkwalks Academy" and og:type website.
 
 This helps in footprinting because it reveals the CMS, SEO plugin version and the purpose of the website.
+### 4.1.2 WhatWeb
+
+I used WhatWeb to fingerprint the technologies used by networkwalks.com. The scan was done on both http and https.
+
+The result shows:
+- Server: Apache with IP 192.232.216.135, Country UNITED STATES
+- First response was 301 Moved Permanently redirecting to https://networkwalks.com/
+- Second response 200 OK shows it runs WordPress 7.1.1, Bootstrap 7.1.4, jQuery 3.7.1, WordPress Download Manager 3.3.58
+- Email found: info@networkwalks.com
+- Other technologies: Google Tag Manager, HTML5, Frame
+
+This information is useful for footprinting as it reveals the web server, CMS and plugins.
+
 
 
 
