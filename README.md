@@ -24,26 +24,26 @@ Every task in this report was carried out either against networkwalks.com, for w
 This report documents the second week of my cybersecurity internship at Networkwalks, split across two hands-on exercises. The first (W2-PM1) focuses on footprinting the networkwalks.com domain using various Kali Linux command-line tools. The second (W2-PM5) focuses on scanning a network I control using Zenmap, the graphical front end for Nmap. Together, both exercises show the steps an attacker usually follows at the start of an engagement, starting with information that is already public and then moving to actively probing which hosts and services are reachable.
 
 All activities below were executed from my Kali Linux terminal. For each tool, I documented the exact command I ran, the result I got, a screenshot of the actual session, and a short note on why that piece of information is important for profiling this target.
-## 4. Activities Performed
+## 3. Activities Performed
 
-### 4.1 Footprinting & Reconnaissance
+### 3.1 Footprinting & Reconnaissance
 
 I executed six different Kali Linux tools on networkwalks.com — WHOIS, WhatWeb, Nslookup, curl, WafW00f and DNSRecon. Each tool was used to collect a different type of public information about the target, from domain ownership to the technologies running on the web server.
 
 **WHOIS** was the first step because domain registration information is usually the easiest place to start. The result showed the domain is hosted with GoDaddy.com, LLC, registered on 20 November 2019 and set to expire on 20 November 2027, last updated on 11 November 2021. The record has four client-side locks (clientDeleteProhibited, clientRenewProhibited, clientTransferProhibited, clientUpdateProhibited) which means the domain is protected from unauthorized changes. The Name Servers are NS6133.HOSTGATOR.COM and NS6134.HOSTGATOR.COM.
-### 4.1.3 Nslookup
+### Nslookup
 
 I used nslookup to find the IP address mapped to the domain networkwalks.com. This tool queries the DNS server directly and is useful for confirming where a website is hosted and what DNS resolver is being used.
 
 I ran the command `nslookup networkwalks.com` and the query was resolved by Google's public DNS server at 8.8.8.8 on port 53. The result returned a non-authoritative answer showing that networkwalks.com points to IP address 192.232.216.135. This confirms the domain is active and publicly resolvable.
 
 From this, I learned that footprinting with nslookup is important because it reveals the underlying IP of the target, which can be used for further enumeration of the hosting infrastructure.
-### 4.1.5 WafW00f
+### WafW00f
 
 I used WafW00f to detect if a Web Application Firewall (WAF) is protecting networkwalks.com. The tool sent 2 requests to https://networkwalks.com.
 
 The result shows the site is behind **ModSecurity (SpiderLabs) WAF**. This means the website has a firewall filtering malicious traffic.
-### 4.1.6 DNSRecon
+### DNSRecon
 
 I used DNSRecon for DNS enumeration on networkwalks.com. The tool started general enumeration for the domain.
 
@@ -55,7 +55,7 @@ The results showed:
 
 This confirms the domain uses HostGator name servers and the same IP for mail and web hosting.
 
-### 4.1.4 Curl
+### Curl
 
 I used curl to fetch the HTTP response and HTML source of networkwalks.com. The command `curl -I https://networkwalks.com` returned the page header and meta tags.
 
