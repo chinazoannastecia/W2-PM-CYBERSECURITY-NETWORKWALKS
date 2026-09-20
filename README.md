@@ -18,5 +18,9 @@ FOOTPRINTING &amp; NETWORK SCANNING PHASES
 | Summary | This report contains footprinting and scanning results for networkwalks.com |
 
 1. ## **1. Liability Disclaimer**
-2. 
+ 
 Every task in this report was carried out either against networkwalks.com, for which the internship program already has documented written approval, or against a Wi-Fi network that belongs to me and that I administer myself. Nothing here is intended for anything beyond learning and personal skill-building. This document should not be used to target a system that has not been authorised for testing, that responsibility sits entirely with whoever chooses to do so, not with Networkwalks, the instructors, or me. Unauthorised access carries real legal consequences in most jurisdictions, whether or not any actual damage occurs.
+## **2. Introduction**
+This report documents the second week of my cybersecurity internship at Networkwalks, split across two hands-on exercises. The first (W2-PM1) focuses on footprinting the networkwalks.com domain using various Kali Linux command-line tools. The second (W2-PM5) focuses on scanning a network I control using Zenmap, the graphical front end for Nmap. Together, both exercises show the steps an attacker usually follows at the start of an engagement, starting with information that is already public and then moving to actively probing which hosts and services are reachable.
+
+All activities below were executed from my Kali Linux terminal. For each tool, I documented the exact command I ran, the result I got, a screenshot of the actual session, and a short note on why that piece of information is important for profiling this target.
