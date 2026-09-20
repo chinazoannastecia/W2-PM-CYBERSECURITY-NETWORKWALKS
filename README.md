@@ -10,7 +10,7 @@ FOOTPRINTING &amp; NETWORK SCANNING PHASES
 | Pentester Name (Cybersecurity Professional) | Ugwuoke Annastecia |
 | Program/Batch | B083-Networkwalks |
 | Date | 20 September 2026 |
-| Modules completed | W2-PM1 (Multiple Kali Tools) |
+| Modules completed | W2-PM1 (Footprinting & Reconnissance Attacks with Multiple Kali Tools) W2-PM5 (Zenmap Scanning)
 | Client/Target | networkwalks.com |
 | Permission | Yes - secured written permission |
 | Tools Used | whois, whatweb, nslookup, curl, wafw00f, dnsrecon, zenmap |
